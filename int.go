@@ -2,12 +2,13 @@ package rand
 
 import (
 	"crypto/rand"
+	"math"
 	"math/big"
 )
 
 // Int returns, as an int
 func Int() int {
-	return Intn(0x7fff_ffff_ffff_ffff)
+	return Intn(math.MaxInt)
 }
 
 // Intn returns, as an int, a non-negative pseudo-random number in [0,n).
