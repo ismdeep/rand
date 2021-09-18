@@ -1,7 +1,6 @@
 package rand
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -50,7 +49,7 @@ func TestHexStr(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			fmt.Println(HexStr(tt.args.len))
+			t.Logf("got = %v", HexStr(tt.args.len))
 		})
 	}
 }
